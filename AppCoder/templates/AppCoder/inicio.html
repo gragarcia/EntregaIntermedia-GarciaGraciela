@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+{% block contenidoModificable %}
+
+<h1>Bienvenido a nuestra página.</h1>
+
+{% endblock %}
+
+{% block contenido2 %}
+
+{% if cursos %}
+<p>Los cursos de la camada {{camada}} son:</p>
+
+<ul>
+    {% for x in cursos %}
+        <li>{{x.nombre}} </li>
+    {% endfor %}   
+</ul>
+
+{% endif %}
+{% endblock %}
